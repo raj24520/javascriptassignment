@@ -1,6 +1,5 @@
 function myfunction(){
-	document.getElementById("demo").innerHTML="HELLO JAVASCRIPT"
-	console.log(true);
-	console.log('abcd');
-	console.log(null);
+	var x="Hello JAVASCRIPT!!"
+	console.log(x);
+	console.log(false);
 }
