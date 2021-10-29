@@ -1,5 +1,5 @@
 var msg="IT IS PRESENT IN GLOBAL";
-
+console.log("Message: "+msg);
 
 function local1(){
 	var msg="It is present in local";
