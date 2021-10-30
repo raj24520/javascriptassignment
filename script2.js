@@ -10,3 +10,4 @@ function local1(){
 function global1(){
 	console.log("Message: "+msg);
 }
+local1();
