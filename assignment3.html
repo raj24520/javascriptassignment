@@ -1,0 +1,90 @@
+<!doctype html>
+	<html>
+	<head>
+		<style>
+			#color{
+				border: 2px solid;
+				padding: 5px;
+				box-shadow: 2px 2px;
+				box-sizing: border-box;
+			}
+			#state{
+				border: 2px solid;
+				padding: 5px;
+				box-shadow: 2px 2px;
+				box-sizing: border-box;
+			}
+			.Display{
+				background-color: powderblue;
+				border-style: solid;
+				border-color: darkslateblue;
+			}
+		</style>
+		<script>
+		    function validateForm() {
+                  let x=document.forms["myForm"]["name"].value;
+                  if (x=="") {
+                         alert("Name must be filled out.");
+                         return false;
+                     }
+                  let y=document.forms["myForm"]["address"].value;
+                  if(y==""){
+                  	alert("Address must be filled out.");
+                  	return false;
+                  }
+                  let z=document.forms["myForm"]["code"].value;
+                  if(z==""){
+                  	alert("Zip code must be filled out.");
+                  	return false;
+                  }
+                  let w=document.forms["myForm"]["state"].value;
+                  if(w==""){
+                  	alert("Select a state");
+                  	return false;
+                  }
+                  let t=document.forms["myForm"]["username"].value;
+                  if(t==""){
+                  	alert("Username cannot be empty.");
+                  	return false;
+                  }
+                  else if(t.length<6){
+                  	alert("Username cannot be less than 6 characters.");
+                  	return false;
+                  }
+                  else if(t.length>8){
+                  	alert("Username cannot be greater than 8 characters.");
+                  	return false;
+                  }
+                  let q=document.forms["myForm"]["email"].value;
+                  if(q==""){
+                  	alert("E-mail cannot be empty.");
+                  	return false;
+                  }
+                  let r=document.forms["myForm"]["check"].value;
+                  alert("Form submitted successfully.");
+               }
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+			<p class="Display"><b>Display:</b><br/>
+			First Name: <input type="text" name="name" id="color"><br/>
+			Address: <input type="text" name="address" id="color"><br/>
+			Zip code: <input type="text" name="code" id="color"><br/>
+			State:&nbsp &nbsp &nbsp &nbsp &nbsp <select id="state" name="state">
+				<option>Select a state</option>
+				<option>Bihar</option>
+				<option>Jharkhand</option>
+				<option>Assam</option>
+				<option>Arunachal Pradesh</option>
+				<option>Uttar Pradesh</option>
+				<option>Maharashtra</option>
+				<option>Tamil Nadu</option>
+				<option>Punjab</option>
+			</select><br/>
+			Username(6-8 characters): <input type="text" name="username" id="color"><br/>
+			Email: <input type="text" name="email" id="color"><br/>
+			<input type="submit" value="Check Form" name="check" id="color">
+			</form></p>
+	</body>
+	</html>
